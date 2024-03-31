@@ -9,4 +9,5 @@ public class NoteBean {
 
     private Integer patId;
     private String note;
+
 }

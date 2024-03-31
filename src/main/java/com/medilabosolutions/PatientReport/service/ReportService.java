@@ -38,10 +38,9 @@ public class ReportService {
             String noteContent = note.getNote().toLowerCase();
             count += countTriggerTermsInNote(noteContent);
         }
-        log.info("Nombre de termes déclencheurs trouvés : {}", count);
+        log.info("Number of trigger terms found : {}", count);
         return count;
     }
-
 
     private static boolean isPatientInDanger(int age, String gender, int triggerCount) {
         if (age < 30) {
@@ -73,12 +72,12 @@ public class ReportService {
 
         for (String term : triggerTerms) {
             if (noteContent.contains(term)) {
-                log.info("Terme déclencheur trouvé: {}", term);
+                log.info("Trigger term found: {}", term);
                 noteTriggerCount++;
             }
         }
         if (noteTriggerCount == 0) {
-            log.info("Aucun terme déclencheur trouvé");
+            log.info("No trigger terms found");
         }
         return noteTriggerCount;
     }

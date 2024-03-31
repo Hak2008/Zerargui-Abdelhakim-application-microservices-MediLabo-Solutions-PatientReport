@@ -12,4 +12,5 @@ public class FeignConfig {
     public RequestInterceptor basicAuthRequestInterceptor() {
         return new BasicAuthRequestInterceptor("user", "user");
     }
+
 }
