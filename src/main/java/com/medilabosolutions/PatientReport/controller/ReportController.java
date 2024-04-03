@@ -6,15 +6,15 @@ import com.medilabosolutions.PatientReport.proxies.PatientInfoServiceProxy;
 import com.medilabosolutions.PatientReport.service.ReportService;
 import feign.FeignException;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import com.medilabosolutions.PatientReport.beans.PatientBean;
 import com.medilabosolutions.PatientReport.beans.NoteBean;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class ReportController {
 
     private final PatientInfoServiceProxy patientInfoServiceProxy;
